@@ -1,7 +1,10 @@
 package br.meplis.knowledge.entities;
 
+
+
 import java.util.Iterator;
 import java.util.List;
+
 
 public class ManagerReaders {
 
@@ -34,7 +37,7 @@ public class ManagerReaders {
     }
 
     //removo leitor
-    public boolean removeReades(String cpf) {
+    public boolean removeReader(String cpf) {
         // Iterator vai percorrer a lista de readers
         Iterator<Reader> iterator = listOfReaders.iterator();
         // Vai adicionar o reader na variavel iterator
@@ -61,10 +64,10 @@ public class ManagerReaders {
     //Alterar dados dos clientes
 
 
-    public Reader updateReader(String newName, String cpf, String newCpf){
+   /* public Reader updateReader(String newName, String cpf){
         Reader reader = searchReades(cpf);
          if (reader != null){
-             reader.updateReaders(newName, newCpf);
+             reader.updateReaders(newName);
          }
         return reader;
     }
@@ -84,5 +87,5 @@ public class ManagerReaders {
             reader.updaterAddress(newStreet, newCity,newState, newCountry );
         }
         return reader;
-    }
+    }*/
 }

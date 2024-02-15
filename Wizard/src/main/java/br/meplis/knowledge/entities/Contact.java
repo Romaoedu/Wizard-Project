@@ -18,10 +18,7 @@ public class Contact extends Address {
     }
 
 
-    public String toString(){
-        return "Email: ".concat(email) +
-                "\nPhoneNumber: ".concat(String.valueOf(phoneNumber));
-    }
+
 
     //alterar dados
 

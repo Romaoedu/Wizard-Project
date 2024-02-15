@@ -1,4 +1,4 @@
-package br.meplis.knowledge.Wizard;
+package br.meplis.knowledge.wizard;
 
 import br.meplis.knowledge.entities.Address;
 import br.meplis.knowledge.entities.Contact;
@@ -7,7 +7,6 @@ import br.meplis.knowledge.entities.Reader;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.ListableBeanFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +31,7 @@ public class ManagerReadersTest {
 
        Address address1 = new Address("Rua r", "NY", "Rj", "BR" );
        Contact contact1 = new Contact("romaoeduu@gmail.com", 21979008134l);
-       Reader reader1 =   new Reader("Eduardo", "05847975759", address1,contact1);
+       Reader reader1 = new Reader("Eduardo", "05847975759", address1, contact1);
        manReaders.newReader(reader1);
 
        Address address2 = new Address("Rua sem saída", "CG", "MS", "BR" );
@@ -58,7 +57,7 @@ public class ManagerReadersTest {
    }
    @Test
    public void testRemoveReader(){
-       boolean removeReader = manReaders.removeReades("01234567890");
+       boolean removeReader = manReaders.removeReader("01234567890");
 
        assertThat(listOfReaders.size(), is(1));
        assertNull(manReaders.searchReades("01234567890"));
@@ -75,7 +74,7 @@ public class ManagerReadersTest {
    }
    @Test
    public void removeInexistentReader(){
-       boolean removedReader = manReaders.removeReades("6546547455");
+       boolean removedReader = manReaders.removeReader("6546547455");
        assertTrue(removedReader);
        assertThat(listOfReaders.size(), is(2));
    }

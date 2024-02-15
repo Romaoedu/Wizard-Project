@@ -22,27 +22,19 @@ public class Reader extends Contact {
         this.contact = contact;
     }
 
-    @Override
-    public String toString(){
 
-        return  "Name: ".concat(name) +
-                "\nCpf:".concat(cpf)+ "\n"+
-                address+ "\n"+
-                contact;
-
-
-    }
-
-    void updateReaders(String newName, String newCpf){
+    void updateReaders(String newName){
         this.name = newName;
-        this.cpf = newCpf;
+
     }
 
     // Dentro da classe Reader
+
+    @Override
     public void updaterContacts(String newEmail, Long newPhoneNumber) {
         this.getContact().updaterContacts(newEmail, newPhoneNumber);
     }
-
+    @Override
     void updaterAddress(String newStreet, String newCity, String newState, String newCountry){
         this.getAddress().updaterAddress(newStreet, newCity, newState,newCountry);
 
@@ -63,9 +55,6 @@ public class Reader extends Contact {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
 
     public Address getAddress() {
         return address;

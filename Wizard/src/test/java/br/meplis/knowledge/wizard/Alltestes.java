@@ -1,4 +1,4 @@
-package br.meplis.knowledge.Wizard;
+package br.meplis.knowledge.wizard;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

@@ -33,11 +33,6 @@ public class Address {
 
     }
 
-    @Override
-    public String toString(){
-        return "Street: " + street + "\nCity: " + city + "\nState: " + state + "\nCountry: " + country;
-    }
-
     public String getStreet() {
         return street;
     }
